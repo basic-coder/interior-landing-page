@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+<body>
+<div class="wrapper">
+    <div class="left-col">
+        <img src="https://cdn.pixabay.com/photo/2016/11/07/13/04/yoga-1805784_1280.png" class="logo" >
+    </div>
+    <div class="content">
+        <h1>Interior designers</h1>
+        <p>Creative designs for your house is here </p>
+        <button>Learn more</button>
+    </div>
+    <div class="right-col">
+        <div class="slider">
+            <img src="https://cdn.pixabay.com/photo/2015/10/20/18/57/furniture-998265_1280.jpg" id="slide" alt="">
+        </div>
+        <div class="slider-content">
+            <h2>Ideas for the room designing</h2>
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Dolorem, quo ea? Aperiam nihil doloribus officia nobis adipisci aliquid laboriosam,<br> explicabo commodi quaerat amet nulla sint fuga quisquam autem ipsum recusandae.</p>
+            <div class="controller">
+                <div class="arrow" id="backBtn"><i class="fa fa-arrow-left"></i></div>
+                <div class="vertical-line"></div>
+                <div class="arrow" id="nextBtn"><i class="fa fa-arrow-right"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+var slide = document.getElementById("slide");
+var backBtn = document.getElementById("backBtn");
+var nextBtn = document.getElementById("nextBtn");
+var slideimages = new Array(
+    "https://cdn.pixabay.com/photo/2014/08/11/21/39/wall-416060__340.jpg","https://cdn.pixabay.com/photo/2015/10/20/18/57/furniture-998265_1280.jpg","https://cdn.pixabay.com/photo/2017/08/27/10/16/interior-2685521__340.jpg","https://cdn.pixabay.com/photo/2017/07/09/03/19/home-2486092_1280.jpg"
+);
+let i=0;
+nextBtn.onclick = function(){
+    if(i < 3){
+    slide.src = slideimages[i+1];
+    i++;
+    }
+}
+backBtn.onclick = function(){
+    if(i > 0){
+    slide.src = slideimages[i-1];
+    i--;
+    }
+}
+</script>
+</body>
+</html>
